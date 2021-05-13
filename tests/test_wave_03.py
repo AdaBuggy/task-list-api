@@ -73,7 +73,7 @@ def test_mark_complete_on_completed_task(client, completed_task):
 
     There is no action needed here, the tests should work as-is.
     """
-    with patch("requests.post") as mock_get:
+    with patch("app.routes.requests.post") as mock_get:
         mock_get.return_value.status_code = 200
 
         # Act

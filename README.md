@@ -1,56 +1,36 @@
-# Task List API
+# Task List API: Buggy Edition!
 
-## Skills Assessed
+## Learning Goals
+There are 3 big opportunities this project offers:
+- To practice understanding code someone else wrote 
+- To practice finding and understanding bugs in code that you may not have encountered before
+- To practice the setup workflow for getting a flask project that's already been written working on your computer.
 
-- Following directions and reading comprehension
-- Reading and using tests
-- Demonstrating understanding of the client-server model, request-response cycle and conventional RESTful routes
-- Driving development with independent research, experimentation, and collaboration
-- Reading and using existing external web APIs
-- Using Postman as part of the development workflow
-- Using git as part of the development workflow
+## Bug Lowdown
 
-Working with the Flask package:
+There is 1 bug in this code, which causes 3 tests to fail.
 
-- Creating models
-- Creating conventional RESTful CRUD routes for a model
-- Reading query parameters to create custom behavior
-- Create unconventional routes for custom behavior
-- Apply knowledge about making requests in Python, to call an API inside of an API
-- Apply knowledge about environment variables
-- Creating a one-to-many relationship between two models
+The objective is to use your debugging skills to _understand_ **what** the program is doing wrong and **why**. At the end of the day, the easiest (and quite possibly best) way to fix the bug would be to just copy/paste your to the buggy functions to replace this solution, so the emphasis here is **less on fixing** the bug and **more on understanding**.
 
-## Goal
+Have fun!
 
-There's so much we want to do in the world! When we organize our goals into smaller, bite-sized tasks, we'll be able to track them more easily, and complete them!
+---------------------------------------------------------------------------------------------------------------------------------------
 
-If we make a web API to organize our tasks, we'll be able to create, read, update, and delete tasks as long as we have access to the Internet and our API is running!
 
-We also want to do some interesting features with our tasks. We want to be able to:
+## Setup
 
-- Sort tasks
-- Mark them as complete
-- Get feedback about our task list through Slack
-- Organize tasks with goals
+### Environment Setup
 
-... and more!
+Don't forget to add a `.env` file to define the environment variables this project expects. You can copy/paste your `.env` file from your version of the project and it should work, assuming the names of the environment variables are the same. 
 
-## How to Complete and Submit
+Hint: You can do a search in the project for `os.environ.get` if you want to remember what environment variables this project requires.
 
-Go through the waves one-by-one and build the features of this API.
+### Virtual Environment Setup
 
-At submission time, no matter where you are, submit the project via Learn.
+We recommend creating a new virtual environment for working with this repo and reinstalling the dependencies into this venv.
 
-## Project Directions
+### Database Setup
 
-This project is designed to fulfill the features described in detail in each wave. The tests are meant to only guide your development.
+The databases you used for this project previously were probably `hello_books_development` and `task_list_api_test`. We suggest updating the environment variables for this repo to use different databases. To do that, you'll need to first create that new databases, then update the environment variables with those new database names. 
 
-1. [Setup](ada-project-docs/setup.md)
-1. [Wave 1: CRUD for one model](ada-project-docs/wave_01.md)
-1. [Wave 2: Using query params](ada-project-docs/wave_02.md)
-1. [Wave 3: Creating custom endpoints](ada-project-docs/wave_03.md)
-1. [Wave 4: Using an external web API](ada-project-docs/wave_04.md)
-1. [Wave 5: Creating a second model](ada-project-docs/wave_05.md)
-1. [Wave 6: Establishing a one-to-many relationship between two models](ada-project-docs/wave_06.md)
-1. [Wave 7: Deployment](ada-project-docs/wave_07.md)
-1. [Optional Enhancements](ada-project-docs/optional-enhancements.md)
+Because this project already has migrations, there's no need to run `flask db init` or `flask db migrate` but you should make sure to run `flask db upgrade`. This ensures the migrations are run to update your database appropriately. 
